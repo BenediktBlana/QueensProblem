@@ -1,13 +1,12 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-
-        int boardSize = 6;
+        // choose board size
+        int boardSize = 4;
         ChessBoard chessBoard = new ChessBoard(boardSize);
-
         chessBoard.fillBoard(chessBoard);
 
-        chessBoard.nQueen(chessBoard, 0);
+        chessBoard.placeQueens(chessBoard, 0);
+
+        System.out.println(chessBoard.getNumberOfSolutions());
     }
 }
